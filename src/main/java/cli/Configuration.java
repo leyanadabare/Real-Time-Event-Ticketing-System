@@ -63,20 +63,20 @@ public class Configuration {
     }
 
 
-    public void saveToFile(String filePath) {
+    public void saveToFile(String fileName) {
         Gson gson = new Gson();
-        try (FileWriter writer = new FileWriter(filePath)) {
+        try (FileWriter writer = new FileWriter(fileName)) {
             gson.toJson(this, writer);
-            System.out.println("Configuration saved to file: " + filePath);
+            System.out.println("Configuration saved to file: " + fileName);
         } catch (IOException e) {
             throw new RuntimeException("Error saving configuration: " + e.getMessage());
         }
     }
 
     // Load configuration from a file
-    public static Configuration loadFromFile(String filePath) {
+    public static Configuration loadFromFile(String fileName) {
         Gson gson = new Gson();
-        try (FileReader reader = new FileReader(filePath)) {
+        try (FileReader reader = new FileReader(fileName)) {
             return gson.fromJson(reader, Configuration.class);
         } catch (IOException e) {
             throw new RuntimeException("Error loading configuration: " + e.getMessage());
