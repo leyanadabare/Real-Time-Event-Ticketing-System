@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the maximum capacity of the ticket pool");
+        System.out.println("Enter the maximum capacity of the ticket pool: ");
         int maxCapacity = scanner.nextInt();
 
         System.out.print("Enter the number of vendors: ");
