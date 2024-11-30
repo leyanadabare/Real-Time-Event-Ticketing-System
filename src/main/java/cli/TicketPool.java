@@ -2,9 +2,13 @@ package cli;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 public class TicketPool {
     private Queue<Ticket> tickets;
     private int maxCapacity;
+    private static final Logger logger = Logger.getLogger(TicketPool.class.getName());
 
     public TicketPool(int maxCapacity) {
         this.tickets = new LinkedList<>();
@@ -29,15 +33,15 @@ public class TicketPool {
     public synchronized void addTickets(Ticket ticket) {
         while (tickets.size() >= maxCapacity) {
             try {
-                System.out.println("Ticket pool full, " + Thread.currentThread().getName() + " is waiting");
+                logger.info("Ticket pool full, " + Thread.currentThread().getName() + " is waiting");
                 wait();
             } catch (InterruptedException e) {
-                e.printStackTrace(); // If it is a CLI program
-                throw new RuntimeException("Thread interrupted: " + e.getMessage()); // Throw the exception to client
+                logger.log(Level.SEVERE, "Vendor interrupted while waiting", e);
+                Thread.currentThread().interrupt();
             }
         }
         tickets.add(ticket);
-        System.out.println(Thread.currentThread().getName() + " added a ticket. Ticket Pool size: " + tickets.size());
+        logger.info(Thread.currentThread().getName() + " added a ticket. Ticket Pool size: " + tickets.size());
         notifyAll();
     }
 
@@ -45,15 +49,16 @@ public class TicketPool {
     public synchronized Ticket buyTickets(int customerId) {
         while (tickets.isEmpty()) {
             try {
-                System.out.println("Customer: " + customerId + " waiting for tickets to become available.");
+                logger.info("Customer: " + customerId + " waiting for tickets to become available.");
                 wait();  // Wait until tickets are added
             } catch (InterruptedException e) {
+                logger.log(Level.SEVERE, "Customer interrupted while waiting", e);
                 Thread.currentThread().interrupt();
-                throw new RuntimeException("Thread inturrupted: " + e.getMessage());
+                return null;
             }
         }
         Ticket ticket = tickets.poll();
-        System.out.println("Customer " + customerId + " purchased " + ticket + ". Remaining tickets: " + tickets.size());
+        logger.info("Customer " + customerId + " purchased " + ticket + ". Remaining tickets: " + tickets.size());
         notifyAll();
         return ticket;
     }
