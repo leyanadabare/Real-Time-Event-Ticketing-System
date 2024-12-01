@@ -1,10 +1,12 @@
 package cli;
 
+
 public class Customer implements Runnable {
     private int customerId;
     private TicketPool ticketPool;
     private int customerRetivelRate;
     private int quantity;
+
 
     public Customer(int customerId, TicketPool ticketPool, int customerRetivelRate, int quantity) {
         this.customerId = customerId;
@@ -12,6 +14,7 @@ public class Customer implements Runnable {
         this.customerRetivelRate = customerRetivelRate;
         this.quantity = quantity;
     }
+
 
     public int getCustomerId() {
         return customerId;
@@ -38,6 +41,7 @@ public class Customer implements Runnable {
         this.quantity = quantity;
     }
 
+
     @Override
     public void run() {
         for (int i = 0; i < quantity; i ++){
@@ -55,6 +59,5 @@ public class Customer implements Runnable {
         System.out.println("Customer: " + customerId + " has finished purchasing tickets.");
     }
 }
-
 
 

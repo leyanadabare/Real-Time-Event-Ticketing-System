@@ -1,1 +1,1 @@
-{"maxCapacity":10,"numVendors":2,"numCustomers":2,"ticketReleaseRate":3,"customerRetrieveRate":3,"totalTicketsPerVendor":10}
+{"maxCapacity":10,"numVendors":3,"numCustomers":3,"ticketReleaseRate":2,"customerRetrieveRate":2,"totalTicketsPerVendor":5}
