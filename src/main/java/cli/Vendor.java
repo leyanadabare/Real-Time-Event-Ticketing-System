@@ -61,7 +61,7 @@ public class Vendor implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 1; i < totalTickets; i++){
+        for (int i = 1; i <= totalTickets; i++){
             Ticket ticket = new Ticket(i,"Event: " + vendorId, new BigDecimal("1000"));
             ticketPool.addTickets(ticket);
             try{

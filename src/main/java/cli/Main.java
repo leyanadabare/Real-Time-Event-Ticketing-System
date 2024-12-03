@@ -41,6 +41,9 @@ public class Main {
             System.out.print("Enter the total tickets each vendor will add: ");
             config.setTotalTicketsPerVendor(scanner.nextInt());
 
+            System.out.print("Enter the number of tickets that each customer will buy: ");
+            config.setQuantity(scanner.nextInt());
+
             System.out.println("Save configuration to a file? (yes/no): ");
             if ("yes".equals(scanner.next().toLowerCase())) {
 
@@ -64,7 +67,7 @@ public class Main {
 
         Customer[] customers = new Customer[config.getNumCustomers()];
         for (int i = 0; i < customers.length; i++){
-            customers[i] = new Customer(i + 1, ticketPool, config.getCustomerRetrieveRate(), config.getMaxCapacity());
+            customers[i] = new Customer(i + 1, ticketPool, config.getCustomerRetrieveRate(), config.getQuantity());
             Thread customerThread = new Thread(customers[i], "Vendor ID: " + (i + 1));
             customerThread.start();
         }
