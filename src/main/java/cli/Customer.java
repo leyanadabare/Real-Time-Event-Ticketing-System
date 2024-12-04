@@ -1,13 +1,17 @@
 package cli;
 
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.scheduling.annotation.Scheduled;
+//import org.springframework.stereotype.Service;
 
+//@Service
 public class Customer implements Runnable {
     private int customerId;
     private TicketPool ticketPool;
     private int customerRetivelRate;
     private int quantity;
 
-
+    //@Autowired
     public Customer(int customerId, TicketPool ticketPool, int customerRetivelRate, int quantity) {
         this.customerId = customerId;
         this.ticketPool = ticketPool;
@@ -41,7 +45,7 @@ public class Customer implements Runnable {
         this.quantity = quantity;
     }
 
-
+    //@Scheduled(fixedRateString = "#{@configuration.customerRetrieveRate * 1000}")
     @Override
     public void run() {
         for (int i = 0; i < quantity; i ++){

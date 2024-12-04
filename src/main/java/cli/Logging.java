@@ -1,40 +1,46 @@
 package cli;
 
-import lombok.Getter;
-
-import java.util.logging.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Logging {
-    @Getter
-    private static final Logger logger = Logger.getLogger("Ticket System Logger");
+    private static final String LOG_FILE_NAME = "ticketing_system.log";
+    private static BufferedWriter writer;
 
     static {
-        try{
-            FileHandler fileHandler = new FileHandler("ticketing_system.log", true);
-            fileHandler.setFormatter(new SimpleFormatter());
-            fileHandler.setLevel(Level.INFO);
-
-            Logger rootLogger = Logger.getLogger("");
-            Handler[] handlers = rootLogger.getHandlers();
-            for (Handler handler : handlers){
-                rootLogger.removeHandler(handler);
-            }
-
-            rootLogger.addHandler(fileHandler);
-
-            ConsoleHandler consoleHandler = new ConsoleHandler();
-            consoleHandler.setLevel(Level.WARNING);
-            consoleHandler.setFormatter(new SimpleFormatter());
-            rootLogger.addHandler(consoleHandler);
-
-            System.out.println("Logging initialized successfully");
-
-        } catch (IOException e){
+        try {
+            // Initialize the BufferedWriter in append mode
+            writer = new BufferedWriter(new FileWriter(LOG_FILE_NAME, true));
+        } catch (IOException e) {
+            System.err.println("Failed to initialize logger: " + e.getMessage());
             e.printStackTrace();
-            throw new RuntimeException("Failed to initialize logger" + e.getMessage());
-
         }
     }
 
+    public static synchronized void log(String level, String message) {
+        try {
+            if (writer != null) {
+                // Format log message with timestamp
+                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+                writer.write(String.format("[%s] [%s] %s%n", timestamp, level, message));
+                writer.flush();
+            }
+        } catch (IOException e) {
+            System.err.println("Error writing to log file: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public static void close() {
+        try {
+            if (writer != null) {
+                writer.close();
+            }
+        } catch (IOException e) {
+            System.err.println("Error closing log file: " + e.getMessage());
+        }
+    }
 }

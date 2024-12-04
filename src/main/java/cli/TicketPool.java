@@ -1,11 +1,12 @@
 package cli;
 
+//import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.logging.Logger;
 
-
+//@Component
 public class TicketPool {
     private Queue<Ticket> tickets = new LinkedList<>();
     private int maxCapacity;
@@ -16,7 +17,6 @@ public class TicketPool {
         //this.tickets = new LinkedList<>();
         this.maxCapacity = maxCapacity;
     }
-
 
     public Queue<Ticket> getTickets() {
         return tickets;

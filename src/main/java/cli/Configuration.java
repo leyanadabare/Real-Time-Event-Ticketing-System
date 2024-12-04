@@ -1,9 +1,15 @@
 package cli;
 
+//import org.springframework.boot.context.properties.ConfigurationProperties;
+//import org.springframework.context.annotation.Configuration;
+
 import com.google.gson.Gson;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
+
+//@Configuration
+//@ConfigurationProperties(prefix = "ticketing")
 
 public class Configuration {
 
@@ -14,6 +20,8 @@ public class Configuration {
     private int customerRetrieveRate;
     private int totalTicketsPerVendor;
     private int quantity;
+
+    public Configuration() {}
 
     public int getMaxCapacity() {
         return maxCapacity;
@@ -93,12 +101,8 @@ public class Configuration {
 
     @Override
     public String toString() {
-        return "Configuration: " +
-                "maxCapacity = " + maxCapacity +
-                ", numVendors = " + numVendors +
-                ", numCustomers = " + numCustomers +
-                ", ticketsReleaseRate = " + ticketReleaseRate +
-                ", customerRetrieveRate = " + customerRetrieveRate +
-                ", totalTicketsPerVendor = " + totalTicketsPerVendor;
+        return "Maximum Capacity = " + maxCapacity + '\n' +
+                "Number of Vendors = " + numVendors + '\n' +
+                "Number of Customers = " + numCustomers;
     }
 }
