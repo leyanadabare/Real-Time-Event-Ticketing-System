@@ -1,10 +1,4 @@
 package cli;
-
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.scheduling.annotation.Scheduled;
-//import org.springframework.stereotype.Service;
-
-//@Service
 public class Customer implements Runnable {
     private int customerId;
     private TicketPool ticketPool;

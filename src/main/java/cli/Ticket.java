@@ -40,7 +40,10 @@ public class Ticket {
     @Override
     public String toString(){
 
-        return "Ticket: " + '\n' + "Ticket ID = " + ticketId + '\n' + "Event Name = " + eventName + '\n' + "Ticket Price = " + ticketPrice;
+        return "Ticket: " + '\n'
+                + "Ticket ID = " + ticketId + '\n'
+                + "Event Name = " + eventName + '\n'
+                + "Ticket Price = " + ticketPrice;
     }
 }
 

@@ -1,21 +1,19 @@
 package cli;
 
-//import org.springframework.stereotype.Component;
-
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.logging.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
-//@Component
 public class TicketPool {
     private Queue<Ticket> tickets = new LinkedList<>();
     private int maxCapacity;
-    private static final Logger logger = Logger.getLogger(TicketPool.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(TicketPool.class);
 
 
     public TicketPool(int maxCapacity) {
-        //this.tickets = new LinkedList<>();
         this.maxCapacity = maxCapacity;
+        logger.info("TicketPool initialized with max capacity: " + maxCapacity);
     }
 
     public Queue<Ticket> getTickets() {
@@ -34,30 +32,29 @@ public class TicketPool {
         this.maxCapacity = maxCapacity;
     }
 
-
-    //Add ticket is called by Vendor when adding tickets to the ticket pool
-    // Synchronized method for adding tickets
     public synchronized void addTickets(Ticket ticket) {
         try {
             while (tickets.size() >= maxCapacity) {
+                logger.warn("Ticket pool is full. Vendor is waiting to add tickets.");
                 System.out.println("Ticket pool is full. Vendor is waiting to add tickets");
                 wait();
             }
             tickets.add(ticket);
+            logger.info("Vendor added a ticket: " + ticket.getTicketId());
             System.out.println("Vendor added a ticket: " + ticket.getTicketId() + " Ticket pool size: " + tickets.size());
             notifyAll();
         } catch (InterruptedException e) {
+            logger.error("Error while adding tickets" + e);
             System.out.println("Error while adding tickets: " + e.getMessage());
             Thread.currentThread().interrupt();
         }
     }
 
-
-    // Synchronized method for purchasing tickets
     public synchronized Ticket buyTickets(int customerId) {
         try {
             while (tickets.isEmpty()){
                 System.out.println("Ticket pool is empty. Customer is waiting for tickets to be available");
+                logger.warn("Ticket pool is empty. Customer " + customerId + " is waiting.");
                 wait();
             }
             Ticket ticket = tickets.poll();
@@ -66,10 +63,12 @@ public class TicketPool {
                     "Event Name: " + ticket.getEventNameName() + '\n' +
                     "Ticket Price: " + ticket.getTicketPrice() + '\n' +
                     "Remaining Tickets: " + tickets.size());
+            logger.info("Customer " + customerId + " purchased ticket: " + ticket.getTicketId());
             notifyAll();
             return ticket;
         } catch (InterruptedException e){
             System.out.println("Error while buying tickets: " + e.getMessage());
+            logger.error("Error while buying tickets", e);
             Thread.currentThread().interrupt();
             return null;
         }

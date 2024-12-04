@@ -1,0 +1,17 @@
+[2024-12-05 00:15:40] [INFO] Starting the Ticketing System Application.
+[2024-12-05 00:15:59] [INFO] [cli.TicketPool] [<init>] - TicketPool initialized with max capacity: 12
+[2024-12-05 00:15:59] [INFO] Ticket pool initialized with capacity: 12
+[2024-12-05 00:15:59] [INFO] Vendor thread started: Vendor 1
+[2024-12-05 00:15:59] [INFO] Vendor thread started: Vendor 2
+[2024-12-05 00:15:59] [INFO] Customer thread started: Customer 1
+[2024-12-05 00:15:59] [INFO] Customer thread started: Customer 2
+[2024-12-05 00:15:59] [INFO] Shutting down the Ticketing System application.
+[2024-12-05 00:15:59] [WARN] [cli.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-05 00:15:59] [INFO] [cli.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-05 00:15:59] [INFO] [cli.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-05 00:15:59] [INFO] [cli.TicketPool] [buyTickets] - Customer 2 purchased ticket: 1
+[2024-12-05 00:15:59] [INFO] [cli.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
+[2024-12-05 00:16:00] [INFO] [cli.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-05 00:16:00] [INFO] [cli.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-05 00:16:00] [INFO] [cli.TicketPool] [buyTickets] - Customer 2 purchased ticket: 2
+[2024-12-05 00:16:00] [INFO] [cli.TicketPool] [buyTickets] - Customer 1 purchased ticket: 2
