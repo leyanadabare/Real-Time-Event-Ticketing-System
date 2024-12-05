@@ -1,7 +1,8 @@
-package cli;
+package objects;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
