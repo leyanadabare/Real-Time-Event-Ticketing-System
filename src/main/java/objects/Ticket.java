@@ -1,4 +1,4 @@
-package cli;
+package objects;
 
 import java.math.BigDecimal;
 
