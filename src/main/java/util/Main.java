@@ -7,8 +7,7 @@ import objects.Vendor;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static util.Services.initializeTicketingSystem;
-import static util.Services.loadConfiguration;
+import static util.Services.*;
 
 public class Main {
 
@@ -19,7 +18,7 @@ public class Main {
 
         try {
             Logging.log("INFO", "Starting the Ticketing System Application.");
-            loadConfiguration(scanner, config);
+            initializeTicketingSystem(loadConfiguration2(scanner, config));
             initializeTicketingSystem(config);
         } catch (ConfigurationLoadException | InputValidationException e) {
             Logging.log("ERROR", "Error occurred: " + e.getMessage());
