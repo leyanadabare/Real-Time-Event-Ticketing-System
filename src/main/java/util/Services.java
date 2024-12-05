@@ -48,7 +48,47 @@ public class Services {
         return false;
     }
 
-    private static void manualInput(Scanner scanner, Configuration config) throws Main.InputValidationException {
+    public static Configuration loadConfiguration2(Scanner scanner, Configuration config) throws Main.ConfigurationLoadException, Main.InputValidationException {
+        System.out.print("Load configuration from file? (yes/no): ");
+        String choice = scanner.next().toLowerCase();
+        Configuration loadedConfig;
+
+        if ("yes".equals(choice)) {
+            try {
+                loadedConfig = Configuration.loadFromFile("config.json");
+                System.out.println("Previous Configuration Details: ");
+                System.out.println(loadedConfig);
+                Logging.log("INFO", "Configuration loaded successfully: " + loadedConfig);
+
+                System.out.print("Do you want to use the selected Configuration? (yes/no): ");
+                String useAppChoice = scanner.next().toLowerCase();
+
+                if ("yes".equals(useAppChoice)) {
+                    // Ask for manual inputs to modify the configuration
+                    return loadedConfig;
+                } else if ("no".equals(useAppChoice)) {
+                    System.out.println("Thank you for using the Ticketing System Application. Goodbye!");
+                    System.exit(0); // Gracefully exit the application
+                } else {
+                    System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+                    return loadConfiguration2(scanner, config); // Retry on invalid input
+                }
+            } catch (RuntimeException e) {
+                Logging.log("ERROR", "Failed to load configuration: " + e.getMessage());
+                System.out.println("Failed to load configuration, please try again.");
+                return loadConfiguration2(scanner, config); // Retry on failure
+            }
+        } else if ("no".equals(choice)) {
+
+            return manualInput(scanner, config);
+        } else {
+            System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+            return loadConfiguration2(scanner, config); // Retry on invalid input
+        }
+        return loadedConfig;
+    }
+
+    private static Configuration manualInput(Scanner scanner, Configuration config) throws Main.InputValidationException {
         // Input validation using helper methods
         config.setMaxCapacity(getValidInput(scanner, "Enter the maximum capacity of the ticket pool: "));
         config.setNumVendors(getValidInput(scanner, "Enter the number of vendors: "));
@@ -73,6 +113,8 @@ public class Services {
                 System.err.println("Failed to save configuration: " + e.getMessage());
             }
         }
+
+        return config;
     }
 
     private static int getValidInput(Scanner scanner, String prompt) throws Main.InputValidationException {
