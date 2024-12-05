@@ -1,7 +1,6 @@
 package cli;
 import java.math.BigDecimal;
 
-
 public class Vendor implements Runnable {
     private int vendorId;
     private int ticketsReleaseRate;

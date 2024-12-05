@@ -4,8 +4,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    
+
     public static void main(String[] args) {
+        System.out.println("...Welcome to the Ticketing System Application!...");
         Scanner scanner = new Scanner(System.in);
         Configuration config = new Configuration();
 
@@ -21,36 +22,44 @@ public class Main {
         }
     }
 
-    private static void loadConfiguration(Scanner scanner, Configuration config) throws ConfigurationLoadException, InputValidationException {
-        String choice;
-        while (true) {
-            System.out.print("Load configuration from file? (yes/no): ");
-            choice = scanner.next().toLowerCase();  // Convert input to lowercase
-
-            if ("yes".equals(choice) || "no".equals(choice)) {
-                break;  // Valid input, exit the loop
-            } else {
-                System.out.println("Invalid input. Please enter 'yes' or 'no'.");
-            }
-        }
+    private static boolean loadConfiguration(Scanner scanner, Configuration config) throws ConfigurationLoadException, InputValidationException {
+        System.out.print("Load configuration from file? (yes/no): ");
+        String choice = scanner.next().toLowerCase();
 
         if ("yes".equals(choice)) {
             try {
-                config = Configuration.loadFromFile("config.json");
+                Configuration loadedConfig = Configuration.loadFromFile("config.json");
                 System.out.println("Previous Configuration Details: ");
-                System.out.println(config);
-                Logging.log("INFO", "Configuration loaded successfully: " + config);
-                System.out.println("Configuration loaded successfully.");
-                manualInput(scanner, config);
+                System.out.println(loadedConfig);
+                Logging.log("INFO", "Configuration loaded successfully: " + loadedConfig);
 
+                System.out.print("Do you want to use the ticket booking application? (yes/no): ");
+                String useAppChoice = scanner.next().toLowerCase();
+
+                if ("yes".equals(useAppChoice)) {
+                    // Ask for manual inputs to modify the configuration
+                    manualInput(scanner, config);
+                    return true;
+                } else if ("no".equals(useAppChoice)) {
+                    System.out.println("Thank you for using the Ticketing System Application. Goodbye!");
+                    System.exit(0); // Gracefully exit the application
+                } else {
+                    System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+                    return loadConfiguration(scanner, config); // Retry on invalid input
+                }
             } catch (RuntimeException e) {
                 Logging.log("ERROR", "Failed to load configuration: " + e.getMessage());
-                System.out.println("Failed to load configuration, please try again");
-                loadConfiguration(scanner, config);
+                System.out.println("Failed to load configuration, please try again.");
+                return loadConfiguration(scanner, config); // Retry on failure
             }
-        } else {
+        } else if ("no".equals(choice)) {
             manualInput(scanner, config);
+            return true;
+        } else {
+            System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+            return loadConfiguration(scanner, config); // Retry on invalid input
         }
+        return false;
     }
 
     private static void manualInput(Scanner scanner, Configuration config) throws InputValidationException {
@@ -64,9 +73,16 @@ public class Main {
         config.setQuantity(getValidInput(scanner, "Enter the number of tickets that each customer will buy: "));
 
         System.out.println("Save configuration to a file? (yes/no): ");
-        if ("yes".equalsIgnoreCase(scanner.next())) {
+        String saveChoice = scanner.next();
+        while (!"yes".equalsIgnoreCase(saveChoice) && !"no".equalsIgnoreCase(saveChoice)) {
+            System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+            saveChoice = scanner.next();
+        }
+
+        if ("yes".equalsIgnoreCase(saveChoice)) {
             try {
                 config.saveToFile("config.json");
+                System.out.println("Configuration saved to file: config.json");
             } catch (RuntimeException e) {
                 System.err.println("Failed to save configuration: " + e.getMessage());
             }
