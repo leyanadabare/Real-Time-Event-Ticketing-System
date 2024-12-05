@@ -1,5 +1,4 @@
 package util;
-
 import objects.Customer;
 import objects.TicketPool;
 import objects.Vendor;
@@ -158,8 +157,4 @@ public class Services {
             Logging.log("ERROR", "Error initializing the ticketing system: " + e.getMessage());
         }
     }
-
-    // Custom exception classes
-
-
 }

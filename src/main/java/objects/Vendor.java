@@ -1,7 +1,8 @@
 package objects;
-
 import java.math.BigDecimal;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Vendor implements Runnable {
     private int vendorId;
     private int ticketsReleaseRate;
@@ -16,46 +17,30 @@ public class Vendor implements Runnable {
         this.totalTickets = totalTickets;
     }
 
-
     public int getVendorId() {
         return vendorId;
     }
-
-
     public void setVendorId(int vendorId) {
         this.vendorId = vendorId;
     }
-
-
     public int getTicketsReleaseRate() {
         return ticketsReleaseRate;
     }
-
-
     public void setTicketsReleaseRate(int ticketsReleaseRate) {
         this.ticketsReleaseRate = ticketsReleaseRate;
     }
-
-
     public TicketPool getTicketPool() {
         return ticketPool;
     }
-
-
     public void setTicketPool(TicketPool ticketPool) {
         this.ticketPool = ticketPool;
     }
-
-
     public int getTotalTickets() {
         return totalTickets;
     }
-
-
     public void setTotalTickets(int totalTickets) {
         this.totalTickets = totalTickets;
     }
-
 
     @Override
     public void run() {

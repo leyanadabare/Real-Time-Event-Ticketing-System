@@ -1,16 +1,16 @@
 package objects;
-
 import java.util.LinkedList;
 import java.util.Queue;
-
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
+@Component
 public class TicketPool {
     private Queue<Ticket> tickets = new LinkedList<>();
     private int maxCapacity;
     private static final Logger logger = LoggerFactory.getLogger(TicketPool.class);
-
 
     public TicketPool(int maxCapacity) {
         this.maxCapacity = maxCapacity;
@@ -33,6 +33,7 @@ public class TicketPool {
         this.maxCapacity = maxCapacity;
     }
 
+    @Async
     public synchronized void addTickets(Ticket ticket) {
         try {
             while (tickets.size() >= maxCapacity) {
@@ -51,6 +52,7 @@ public class TicketPool {
         }
     }
 
+    @Async
     public synchronized Ticket buyTickets(int customerId) {
         try {
             while (tickets.isEmpty()){

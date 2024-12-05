@@ -1,14 +1,11 @@
 package util;
-
-import objects.Customer;
-import objects.TicketPool;
-import objects.Vendor;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import static util.Services.*;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
+@SpringBootApplication
+@EnableAsync // Enable asynchronous operations
 public class Main {
 
     public static void main(String[] args) {
@@ -39,6 +36,4 @@ public class Main {
             super(message);
         }
     }
-
-
 }

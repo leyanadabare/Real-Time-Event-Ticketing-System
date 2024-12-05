@@ -1,7 +1,5 @@
 package objects;
-
 import java.math.BigDecimal;
-
 
 public class Ticket {
     private int ticketId;
@@ -16,30 +14,24 @@ public class Ticket {
     public int getTicketId() {
         return ticketId;
     }
-
     public void setTicketId(int ticketId) {
         this.ticketId = ticketId;
     }
-
     public String getEventNameName() {
         return eventName;
     }
-
     public void setEventNametName(String ticketName) {
         this.eventName = ticketName;
     }
-
     public BigDecimal getTicketPrice() {
         return ticketPrice;
     }
-
     public void setTicketPrice(BigDecimal ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
 
     @Override
     public String toString(){
-
         return "Ticket: " + '\n'
                 + "Ticket ID = " + ticketId + '\n'
                 + "Event Name = " + eventName + '\n'
