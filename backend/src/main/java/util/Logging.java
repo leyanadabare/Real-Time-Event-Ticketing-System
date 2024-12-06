@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Logging {
-    private static final String LOG_FILE_NAME = "ticketing_system.log";
+    private static final String LOG_FILE_NAME = "/Users/leyanadaba/Desktop/OOPFinalFinal/ticketing_system.log";
     private static BufferedWriter writer;
 
     static {
