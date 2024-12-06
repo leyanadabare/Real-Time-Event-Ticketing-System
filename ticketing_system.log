@@ -1,0 +1,526 @@
+[2024-12-06 14:43:07] [INFO] Starting the Ticketing System Application.
+[2024-12-06 14:43:23] [INFO] Starting the Ticketing System Application.
+[2024-12-06 14:43:30] [ERROR] Failed to load configuration: Error loading configuration: config.json (No such file or directory)
+[2024-12-06 14:44:13] [INFO] Shutting down the Ticketing System application.
+[2024-12-06 14:50:28] [INFO] Starting the Ticketing System Application.
+[2024-12-06 14:50:36] [INFO] Configuration loaded successfully: Maximum Capacity = 10
+Number of Vendors = 5
+Number of Customers = 5
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 10
+[2024-12-06 14:50:42] [INFO] Ticket pool initialized with capacity: 10
+[2024-12-06 14:50:42] [INFO] Vendor thread started: Vendor 1
+[2024-12-06 14:50:42] [INFO] Vendor thread started: Vendor 2
+[2024-12-06 14:50:42] [INFO] Vendor thread started: Vendor 3
+[2024-12-06 14:50:42] [INFO] Vendor thread started: Vendor 4
+[2024-12-06 14:50:42] [INFO] Vendor thread started: Vendor 5
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:50:42] [INFO] Customer thread started: Customer 1
+[2024-12-06 14:50:42] [INFO] Customer thread started: Customer 2
+[2024-12-06 14:50:42] [INFO] Customer thread started: Customer 3
+[2024-12-06 14:50:42] [INFO] Customer thread started: Customer 4
+[2024-12-06 14:50:42] [INFO] Customer thread started: Customer 5
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 0
+[2024-12-06 14:50:42] [INFO] Ticket pool initialized with capacity: 0
+[2024-12-06 14:50:42] [INFO] Shutting down the Ticketing System application.
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 1
+[2024-12-06 14:50:42] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:50:42] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 3 is waiting.
+[2024-12-06 14:50:42] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:50:42] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 1
+[2024-12-06 14:50:42] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 1
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 2
+[2024-12-06 14:50:44] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:50:44] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 3 is waiting.
+[2024-12-06 14:50:44] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 2
+[2024-12-06 14:50:44] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 2
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 3
+[2024-12-06 14:50:46] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 3
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 4
+[2024-12-06 14:50:48] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:50:48] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 4
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 5
+[2024-12-06 14:50:50] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 5
+[2024-12-06 14:50:50] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 5
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 6
+[2024-12-06 14:50:52] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 6
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:50:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 7
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 8
+[2024-12-06 14:50:56] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:50:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 8
+[2024-12-06 14:50:58] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 3 is waiting.
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 9
+[2024-12-06 14:50:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 9
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 10
+[2024-12-06 14:51:00] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:51:00] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 10
+[2024-12-06 14:51:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 10
+[2024-12-06 14:51:35] [INFO] Starting the Ticketing System Application.
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 10
+[2024-12-06 14:51:53] [INFO] Ticket pool initialized with capacity: 10
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 1
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 2
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 3
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 4
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 5
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 1
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 2
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 3
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 4
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 5
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 10
+[2024-12-06 14:51:53] [INFO] Ticket pool initialized with capacity: 10
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 2
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 3
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 4
+[2024-12-06 14:51:53] [INFO] Vendor thread started: Vendor 5
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 2
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 3
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 4
+[2024-12-06 14:51:53] [INFO] Customer thread started: Customer 5
+[2024-12-06 14:51:53] [INFO] Shutting down the Ticketing System application.
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
+[2024-12-06 14:51:53] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 3 is waiting.
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 1
+[2024-12-06 14:51:53] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:51:53] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 1
+[2024-12-06 14:51:53] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 1
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 2
+[2024-12-06 14:51:54] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 2
+[2024-12-06 14:51:55] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:51:55] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:51:55] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 3 is waiting.
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 3
+[2024-12-06 14:51:55] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 3 is waiting.
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 3
+[2024-12-06 14:51:55] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 3
+[2024-12-06 14:51:56] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 4
+[2024-12-06 14:51:56] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 4
+[2024-12-06 14:51:56] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 4
+[2024-12-06 14:51:57] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:51:57] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 5
+[2024-12-06 14:51:57] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 5
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 6
+[2024-12-06 14:51:58] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 6
+[2024-12-06 14:51:58] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 6
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 7
+[2024-12-06 14:51:59] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 7
+[2024-12-06 14:51:59] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 7
+[2024-12-06 14:51:59] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 7
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 8
+[2024-12-06 14:52:00] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 14:52:00] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 8
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 9
+[2024-12-06 14:52:01] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 4 is waiting.
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 9
+[2024-12-06 14:52:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 9
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 10
+[2024-12-06 14:52:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 10
+[2024-12-06 15:29:53] [INFO] Starting the Ticketing System Application.
+[2024-12-06 15:29:58] [INFO] Configuration loaded successfully: Maximum Capacity = 10
+Number of Vendors = 5
+Number of Customers = 5
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 10
+[2024-12-06 15:30:01] [INFO] Ticket pool initialized with capacity: 10
+[2024-12-06 15:30:01] [INFO] Vendor thread started: Vendor 1
+[2024-12-06 15:30:01] [INFO] Vendor thread started: Vendor 2
+[2024-12-06 15:30:01] [INFO] Vendor thread started: Vendor 3
+[2024-12-06 15:30:01] [INFO] Vendor thread started: Vendor 4
+[2024-12-06 15:30:01] [INFO] Vendor thread started: Vendor 5
+[2024-12-06 15:30:01] [INFO] Customer thread started: Customer 1
+[2024-12-06 15:30:01] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 15:30:01] [INFO] Customer thread started: Customer 2
+[2024-12-06 15:30:01] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 15:30:01] [INFO] Customer thread started: Customer 3
+[2024-12-06 15:30:01] [INFO] Customer thread started: Customer 4
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:30:01] [INFO] Customer thread started: Customer 5
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 0
+[2024-12-06 15:30:01] [INFO] Ticket pool initialized with capacity: 0
+[2024-12-06 15:30:01] [INFO] Shutting down the Ticketing System application.
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 1
+[2024-12-06 15:30:01] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 1
+[2024-12-06 15:30:02] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 2
+[2024-12-06 15:30:02] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 2
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 3
+[2024-12-06 15:30:03] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 3
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 4
+[2024-12-06 15:30:04] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 5 is waiting.
+[2024-12-06 15:30:04] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 4
+[2024-12-06 15:30:04] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 4
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 5
+[2024-12-06 15:30:05] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 5
+[2024-12-06 15:30:05] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 5
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 6
+[2024-12-06 15:30:06] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 6
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 7
+[2024-12-06 15:30:07] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 7
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 8
+[2024-12-06 15:30:08] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 8
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 9
+[2024-12-06 15:30:09] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 9
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [buyTickets] - Customer 4 purchased ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [buyTickets] - Customer 3 purchased ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [buyTickets] - Customer 5 purchased ticket: 10
+[2024-12-06 15:30:10] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 2 is waiting.
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 10
+[2024-12-06 15:30:10] [INFO] [objects.TicketPool] [buyTickets] - Customer 2 purchased ticket: 10
+[2024-12-06 15:40:27] [INFO] Starting the Ticketing System Application.
+[2024-12-06 15:40:49] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 10
+[2024-12-06 15:40:49] [INFO] Ticket pool initialized with capacity: 10
+[2024-12-06 15:40:49] [INFO] Vendor thread started: Vendor 1
+[2024-12-06 15:40:49] [INFO] Customer thread started: Customer 1
+[2024-12-06 15:40:49] [INFO] [objects.TicketPool] [<init>] - TicketPool initialized with max capacity: 10
+[2024-12-06 15:40:49] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 15:40:49] [INFO] Ticket pool initialized with capacity: 10
+[2024-12-06 15:40:49] [INFO] Vendor thread started: Vendor 1
+[2024-12-06 15:40:49] [INFO] Customer thread started: Customer 1
+[2024-12-06 15:40:49] [INFO] Shutting down the Ticketing System application.
+[2024-12-06 15:40:49] [WARN] [objects.TicketPool] [buyTickets] - Ticket pool is empty. Customer 1 is waiting.
+[2024-12-06 15:40:49] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:40:49] [INFO] [objects.TicketPool] [addTickets] - Vendor added a ticket: 1
+[2024-12-06 15:40:49] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
+[2024-12-06 15:40:49] [INFO] [objects.TicketPool] [buyTickets] - Customer 1 purchased ticket: 1
