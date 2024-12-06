@@ -86,14 +86,48 @@ public class Services {
         }
         return loadedConfig;
     }
-
     private static Configuration manualInput(Scanner scanner, Configuration config) throws Main.InputValidationException {
         // Input validation using helper methods
         config.setMaxCapacity(getValidInput(scanner, "Enter the maximum capacity of the ticket pool: "));
         config.setNumVendors(getValidInput(scanner, "Enter the number of vendors: "));
         config.setNumCustomers(getValidInput(scanner, "Enter the number of customers: "));
-        config.setTicketReleaseRate(getValidInput(scanner, "Enter the ticket release rate: "));
-        config.setCustomerRetrieveRate(getValidInput(scanner, "Enter the customer retrieval rate: "));
+
+        // Validate and set ticket release rate
+        int ticketReleaseRate;
+        while (true) {
+            System.out.print("Enter the ticket release rate: ");
+            try {
+                ticketReleaseRate = scanner.nextInt();
+                if (ticketReleaseRate > 0 && ticketReleaseRate <= config.getMaxCapacity()) {
+                    config.setTicketReleaseRate(ticketReleaseRate);
+                    break;
+                } else {
+                    System.out.println("Ticket release rate must be greater than 0 and less than or equal to the maximum capacity, please try again.");
+                }
+            } catch (InputMismatchException e) {
+                scanner.next(); // clear the invalid input
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        // Validate and set customer retrieval rate
+        int customerRetrieveRate;
+        while (true) {
+            System.out.print("Enter the customer retrieval rate: ");
+            try {
+                customerRetrieveRate = scanner.nextInt();
+                if (customerRetrieveRate > 0 && customerRetrieveRate <= config.getMaxCapacity()) {
+                    config.setCustomerRetrieveRate(customerRetrieveRate);
+                    break;
+                } else {
+                    System.out.println("Customer retrieval rate must be greater than 0 and less than or equal to the maximum capacity, please try again.");
+                }
+            } catch (InputMismatchException e) {
+                scanner.next(); // clear the invalid input
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+
         config.setTotalTicketsPerVendor(getValidInput(scanner, "Enter the total tickets each vendor will add: "));
         config.setQuantity(getValidInput(scanner, "Enter the number of tickets that each customer will buy: "));
 
