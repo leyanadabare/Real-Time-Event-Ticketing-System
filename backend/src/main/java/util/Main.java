@@ -1,14 +1,14 @@
 package util;
 import java.util.Scanner;
 import static util.Services.*;
+
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
-
-@SpringBootApplication
 @EnableAsync // Enable asynchronous operations
 public class Main {
-
     public static void main(String[] args) {
+
         System.out.println("...Welcome to the Ticketing System Application!...");
         Scanner scanner = new Scanner(System.in);
         Configuration config = new Configuration();
