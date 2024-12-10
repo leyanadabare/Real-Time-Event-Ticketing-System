@@ -7,46 +7,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Services {
-    public static boolean loadConfiguration(Scanner scanner, Configuration config) throws Main.ConfigurationLoadException, Main.InputValidationException {
-        System.out.print("Load configuration from file? (yes/no): ");
-        String choice = scanner.next().toLowerCase();
-
-        if ("yes".equals(choice)) {
-            try {
-                Configuration loadedConfig = Configuration.loadFromFile("config.json");
-                System.out.println("Previous Configuration Details: ");
-                System.out.println(loadedConfig);
-                Logging.log("INFO", "Configuration loaded successfully: " + loadedConfig);
-
-                System.out.print("Do you want to use the ticket booking application? (yes/no): ");
-                String useAppChoice = scanner.next().toLowerCase();
-
-                if ("yes".equals(useAppChoice)) {
-                    // Ask for manual inputs to modify the configuration
-                    manualInput(scanner, config);
-                    return true;
-                } else if ("no".equals(useAppChoice)) {
-                    System.out.println("Thank you for using the Ticketing System Application. Goodbye!");
-                    System.exit(0); // Gracefully exit the application
-                } else {
-                    System.out.println("Invalid input. Please enter 'yes' or 'no'.");
-                    return loadConfiguration(scanner, config); // Retry on invalid input
-                }
-            } catch (RuntimeException e) {
-                Logging.log("ERROR", "Failed to load configuration: " + e.getMessage());
-                System.out.println("Failed to load configuration, please try again.");
-                return loadConfiguration(scanner, config); // Retry on failure
-            }
-        } else if ("no".equals(choice)) {
-            manualInput(scanner, config);
-            return true;
-        } else {
-            System.out.println("Invalid input. Please enter 'yes' or 'no'.");
-            return loadConfiguration(scanner, config); // Retry on invalid input
-        }
-        return false;
-    }
-
     public static Configuration loadConfiguration2(Scanner scanner, Configuration config) throws Main.ConfigurationLoadException, Main.InputValidationException {
         System.out.print("Load configuration from file? (yes/no): ");
         String choice = scanner.next().toLowerCase();

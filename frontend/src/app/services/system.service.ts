@@ -1,21 +1,75 @@
+// //updated service.ts -2
+// import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+//
+// @Injectable({
+//   providedIn: 'root', // Keep this as is
+// })
+// export class SystemService {
+//
+//   private apiUrl = 'http://localhost:8080'; // Update with your API URL
+//
+//   constructor(private http: HttpClient) {}
+//
+//   // Methods for ControlPanelComponent
+//   runAndSaveConfiguration(configData: any): Observable<any> {
+//     return this.http.post(`${this.apiUrl}/runWithSave`, configData);
+//   }
+//
+//   runWithoutSaving(configData: any): Observable<any> {
+//     return this.http.post(`${this.apiUrl}/runWithoutSave`, configData);
+//   }
+//
+//   // Methods for LogDisplayComponent
+//   getLogs(): Observable<string[]> {
+//     return this.http.get<string[]>(`${this.apiUrl}/logs`);
+//   }
+//
+//   // Methods for TicketDisplayComponent
+//   getTickets(): Observable<string[]> {
+//     return this.http.get<string[]>(`${this.apiUrl}/tickets`);
+//   }
+// }
+//
+//
+import { BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root', // Keep this as is
 })
 export class SystemService {
-  private tickets: number = 0;
-  tickets$: any;
+  private ticketCountSubject = new BehaviorSubject<number>(0);
+  ticketCount$ = this.ticketCountSubject.asObservable();
 
-  updateTickets(count: number) {
-    this.tickets = count;
+  updateTicketCount(count: number) {
+    this.ticketCountSubject.next(count);
   }
-  getTickets(): number {
-    return this.tickets;
+
+
+  private apiUrl = 'http://localhost:8080'; // Update with your API URL
+
+  constructor(private http: HttpClient) {}
+
+  // Methods for ControlPanelComponent
+  runAndSaveConfiguration(configData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/runWithSave`, configData);
   }
-  constructor() { }
 
-  updateSystemStatus(b: boolean) {
+  runWithoutSaving(configData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/runWithoutSave`, configData);
+  }
 
+  // Methods for LogDisplayComponent
+  getLogs(): Observable<string[]> {
+    return this.http.get<string[]>(`${this.apiUrl}/logs`);
+  }
+
+  // Methods for TicketDisplayComponent
+  getTickets(): Observable<string[]> {
+    return this.http.get<string[]>(`${this.apiUrl}/tickets`);
   }
 }

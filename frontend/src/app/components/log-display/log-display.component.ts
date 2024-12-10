@@ -1,27 +1,66 @@
-import { Component, OnInit } from '@angular/core';
+//
+// //3rd
+// import { Component, OnInit } from '@angular/core';
+// import { SystemService } from '../../services/system.service'; // Updated import
+// import { CommonModule } from '@angular/common';
+//
+// @Component({
+//   selector: 'app-log-display',
+//   templateUrl: './log-display.component.html',
+//   styleUrls: ['./log-display.component.css'],
+//   imports: [CommonModule],
+//   standalone: true
+// })
+// export class LogDisplayComponent implements OnInit {
+//   logs: string[] = [];
+//
+//   constructor(private systemService: SystemService) {}
+//
+//   ngOnInit() {
+//     this.fetchLogs();
+//   }
+//
+//   fetchLogs() {
+//     this.systemService.getLogs().subscribe(
+//       (response: string[]) => {
+//         this.logs = response;
+//       },
+//       (error) => {
+//         console.error('Error fetching logs:', error);
+//       }
+//     );
+//   }
+// }
+//
+import { Component, Input, OnInit } from '@angular/core';
 import { SystemService } from '../../services/system.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-log-display',
-  template: `
-    <div>
-      <h2>System Logs</h2>
-      <ul>
-        <li *ngFor="let log of logs">{{ log }}</li>
-      </ul>
-    </div>
-  `,
+  templateUrl: './log-display.component.html',
+  styleUrls: ['./log-display.component.css'],
+  imports: [CommonModule],
   standalone: true
 })
 export class LogDisplayComponent implements OnInit {
-  logs: string[] = [];
+  @Input() logs: string[] = [];
+  //logs: string[] = [];
 
-  constructor(private ticketService: SystemService) {}
+  constructor(private systemService: SystemService) {}
 
   ngOnInit() {
-    // Replace with actual log subscription logic if available
-    // This is just a placeholder.
-    this.logs = ['System initialized.', 'Ticket pool created.'];
+    this.fetchLogs();
+  }
+
+  fetchLogs() {
+    this.systemService.getLogs().subscribe(
+      (response: string[]) => {
+        this.logs = response;
+      },
+      (error) => {
+        console.error('Error fetching logs:', error);
+      }
+    );
   }
 }
-
