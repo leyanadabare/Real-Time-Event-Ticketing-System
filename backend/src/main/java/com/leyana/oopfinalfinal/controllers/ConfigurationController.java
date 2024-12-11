@@ -223,6 +223,8 @@ public class ConfigurationController {
     @PostMapping("/run")
     public ResponseEntity<String> runConfiguration(@RequestBody Configuration configuration) {
         try {
+            //clearing the log file
+            configurationService.clearLogFile();
             System.out.println("Running configuration simulation: " + configuration);
             configurationService.runConfiguration(configuration);
             return ResponseEntity.ok("Simulation started successfully!");

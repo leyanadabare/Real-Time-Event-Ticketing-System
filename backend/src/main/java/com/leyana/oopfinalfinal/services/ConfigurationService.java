@@ -245,5 +245,16 @@ public class ConfigurationService {
             return logsToReturn;
         }
     }
+
+
+    // Method to clear the log file
+    public void clearLogFile() throws IOException {
+        File logFile = new File(LOG_FILE);
+        if (logFile.exists()) {
+            try (FileWriter fileWriter = new FileWriter(logFile)) {
+                fileWriter.write("");  // Clear the file contents
+            }
+        }
+    }
 }
 
