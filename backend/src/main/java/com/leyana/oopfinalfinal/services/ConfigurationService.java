@@ -1,11 +1,10 @@
-package services;
-import org.springframework.stereotype.Service;
-import com.google.gson.Gson;
-import util.Configuration;
+package com.leyana.oopfinalfinal.services;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.springframework.stereotype.Service;
+import com.leyana.oopfinalfinal.util.Configuration;
+import com.leyana.oopfinalfinal.util.Logging;
+
+import static com.leyana.oopfinalfinal.util.Services.initializeTicketingSystem;
 
 @Service
 public class ConfigurationService {
@@ -17,7 +16,6 @@ public class ConfigurationService {
         try {
             return Configuration.loadFromFile(CONFIG_FILE);
         } catch (RuntimeException e) {
-            // Return default configuration and log the error
             System.err.println("Error loading configuration: " + e.getMessage());
             return new Configuration();
         }
@@ -30,6 +28,18 @@ public class ConfigurationService {
         } catch (RuntimeException e) {
             System.err.println("Error saving configuration: " + e.getMessage());
             throw e;
+        }
+    }
+
+    // Run the configuration simulation
+    public void runConfiguration(Configuration configuration) {
+        try {
+            // Validate and initialize the ticketing system
+            Logging.log("INFO", "Starting ticketing system simulation...");
+            initializeTicketingSystem(configuration);
+        } catch (Exception e) {
+            Logging.log("ERROR", "Simulation failed: " + e.getMessage());
+            throw new RuntimeException("Simulation failed", e);
         }
     }
 }
