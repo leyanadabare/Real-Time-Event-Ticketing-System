@@ -1,0 +1,84 @@
+
+<!--&lt;!&ndash;3rd attempt&ndash;&gt;-->
+<!--<form [formGroup]="configForm" (ngSubmit)="onSubmit(actionType)">-->
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Maximum Capacity of the Ticket Pool</mat-label>-->
+<!--    <input matInput formControlName="ticketPoolCapacity" type="number" />-->
+<!--  </mat-form-field>-->
+
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Number of Vendors</mat-label>-->
+<!--    <input matInput formControlName="numberOfVendors" type="number" />-->
+<!--  </mat-form-field>-->
+
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Number of Customers</mat-label>-->
+<!--    <input matInput formControlName="numberOfCustomers" type="number" />-->
+<!--  </mat-form-field>-->
+
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Retrieval Rate</mat-label>-->
+<!--    <input matInput formControlName="retrievalRate" type="number" />-->
+<!--  </mat-form-field>-->
+
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Ticket Release Rate</mat-label>-->
+<!--    <input matInput formControlName="releaseRate" type="number" />-->
+<!--  </mat-form-field>-->
+
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Total Number of Tickets for the Event</mat-label>-->
+<!--    <input matInput formControlName="totalTickets" type="number" />-->
+<!--  </mat-form-field>-->
+
+<!--  <div class="button-container">-->
+<!--    <button mat-raised-button color="primary" type="submit" (click)="onSubmit('run')">-->
+<!--      Run-->
+<!--    </button>-->
+<!--    <button mat-raised-button color="accent" type="submit" (click)="onSubmit('runWithoutSaving')">-->
+<!--      Run Configuration Without Saving-->
+<!--    </button>-->
+<!--  </div>-->
+<!--</form>-->
+
+
+<form [formGroup]="configForm" (ngSubmit)="onSubmit(actionType)">
+  <mat-form-field appearance="fill">
+    <mat-label>Maximum Capacity of the Ticket Pool</mat-label>
+    <input matInput formControlName="ticketPoolCapacity" type="number" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Number of Vendors</mat-label>
+    <input matInput formControlName="numberOfVendors" type="number" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Number of Customers</mat-label>
+    <input matInput formControlName="numberOfCustomers" type="number" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Retrieval Rate</mat-label>
+    <input matInput formControlName="retrievalRate" type="number" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Ticket Release Rate</mat-label>
+    <input matInput formControlName="releaseRate" type="number" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Total Number of Tickets for the Event</mat-label>
+    <input matInput formControlName="totalTickets" type="number" />
+  </mat-form-field>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" type="submit" (click)="onSubmit('run')">
+      Run
+    </button>
+    <button mat-raised-button color="accent" type="submit" (click)="onSubmit('runWithoutSaving')">
+      Run Configuration Without Saving
+    </button>
+  </div>
+</form>

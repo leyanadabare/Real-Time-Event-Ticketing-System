@@ -1,0 +1,13 @@
+<!--<div>-->
+<!--  <h1>Ticketing System</h1>-->
+<!--  <app-configuration-form></app-configuration-form>-->
+<!--  <app-ticket-display></app-ticket-display>-->
+<!--  <app-control-panel></app-control-panel>-->
+<!--  <app-log-display></app-log-display>-->
+<!--</div>-->
+
+
+<app-configuration-form (settingsChanged)="handleSettingsChanged($event)"></app-configuration-form>
+<app-ticket-display [ticketCount]="ticketCount"></app-ticket-display>
+<app-control-panel (systemStarted)="handleSystemStarted()" (systemStopped)="handleSystemStopped()"></app-control-panel>
+<app-log-display [logs]="logs"></app-log-display>
