@@ -1,8 +1,8 @@
-package controllers;
+package com.leyana.oopfinalfinal.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import services.LoggingService;
+import com.leyana.oopfinalfinal.services.LoggingService;
 import java.util.List;
 
 @RestController

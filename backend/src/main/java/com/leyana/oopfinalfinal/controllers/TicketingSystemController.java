@@ -1,7 +1,7 @@
-package controllers;
+package com.leyana.oopfinalfinal.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import services.TicketingSystemService;  // Assuming you have a service to manage the system's state
+import com.leyana.oopfinalfinal.services.TicketingSystemService;  // Assuming you have a service to manage the system's state
 import org.springframework.http.ResponseEntity;
 
 @RestController

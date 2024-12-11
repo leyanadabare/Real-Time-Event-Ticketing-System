@@ -1,7 +1,7 @@
-package util;
-import objects.Customer;
-import objects.TicketPool;
-import objects.Vendor;
+package com.leyana.oopfinalfinal.util;
+import com.leyana.oopfinalfinal.objects.Customer;
+import com.leyana.oopfinalfinal.objects.TicketPool;
+import com.leyana.oopfinalfinal.objects.Vendor;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,12 +1,10 @@
-package objects;
+package com.leyana.oopfinalfinal.objects;
 import java.util.LinkedList;
 import java.util.Queue;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Component;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-@Component
 public class TicketPool {
     private Queue<Ticket> tickets = new LinkedList<>();
     private int maxCapacity;

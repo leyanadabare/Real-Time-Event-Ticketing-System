@@ -1,9 +1,7 @@
-package util;
+package com.leyana.oopfinalfinal.util;
 import java.util.Scanner;
-import static util.Services.*;
+import static com.leyana.oopfinalfinal.util.Services.*;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync // Enable asynchronous operations
 public class Main {

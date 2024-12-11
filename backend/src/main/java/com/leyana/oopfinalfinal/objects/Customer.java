@@ -1,7 +1,6 @@
-package objects;
+package com.leyana.oopfinalfinal.objects;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Customer implements Runnable {
     private int customerId;
     private TicketPool ticketPool;

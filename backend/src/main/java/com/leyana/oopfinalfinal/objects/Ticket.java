@@ -1,4 +1,4 @@
-package objects;
+package com.leyana.oopfinalfinal.objects;
 import java.math.BigDecimal;
 
 public class Ticket {

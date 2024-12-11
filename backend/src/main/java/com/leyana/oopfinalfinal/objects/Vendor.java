@@ -1,8 +1,7 @@
-package objects;
+package com.leyana.oopfinalfinal.objects;
 import java.math.BigDecimal;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Vendor implements Runnable {
     private int vendorId;
     private int ticketsReleaseRate;

@@ -1,4 +1,4 @@
-package util;
+package com.leyana.oopfinalfinal.util;
 import com.google.gson.Gson;
 import java.io.FileWriter;
 import java.io.FileReader;

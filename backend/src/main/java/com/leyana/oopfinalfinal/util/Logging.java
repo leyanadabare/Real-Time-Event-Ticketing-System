@@ -1,4 +1,4 @@
-package util;
+package com.leyana.oopfinalfinal.util;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
