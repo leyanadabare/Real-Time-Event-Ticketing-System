@@ -1,24 +1,26 @@
 package com.leyana.oopfinalfinal.services;
-
 import com.leyana.oopfinalfinal.util.Configuration;
 import org.springframework.stereotype.Service;
 import com.leyana.oopfinalfinal.util.Logging;
-
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
-
 import static com.leyana.oopfinalfinal.util.Services.initializeTicketingSystem;
 
+/**
+ * This service class handles configuration management, simulation execution, and log management.
+ */
 @Service
 public class ConfigurationService {
-
     private static final String CONFIG_FILE = "config.json";
-    private static final String LOG_FILE = "logs/ticketing_system.log";  // Correct log file path
+    private static final String LOG_FILE = "logs/ticketing_system.log";
     private final List<String> logMessages = new ArrayList<>();
-    private AtomicBoolean isReadingLogs = new AtomicBoolean(false); // Flag to control log reading
+    private AtomicBoolean isReadingLogs = new AtomicBoolean(false);
 
-    // Retrieve configuration
+    /**
+     * Retrieves the configuration from the specified file.
+     * @return the loaded configuration object
+     */
     public Configuration getConfiguration() {
         try {
             return Configuration.loadFromFile(CONFIG_FILE);
@@ -28,7 +30,10 @@ public class ConfigurationService {
         }
     }
 
-    // Save configuration
+    /**
+     * Saves the configuration to the specified file.
+     * @param configuration the configuration object to save
+     */
     public void saveConfiguration(Configuration configuration) {
         try {
             configuration.saveToFile(CONFIG_FILE);
@@ -38,13 +43,16 @@ public class ConfigurationService {
         }
     }
 
-    // Run the configuration simulation
+    /**
+     * Runs the ticketing system simulation based on the given configuration.
+     * @param configuration the configuration object
+     */
     public void runConfiguration(Configuration configuration) {
         try {
             Logging.log("INFO", "Starting ticketing system simulation...");
             initializeTicketingSystem(configuration);
 
-            // Start log reading in a separate thread
+            // Start real-time log reading in a separate thread
             isReadingLogs.set(true);
             readLogsRealTime();  // Start reading logs from the file
         } catch (Exception e) {
@@ -53,7 +61,9 @@ public class ConfigurationService {
         }
     }
 
-    // Method to start reading logs in real-time
+    /**
+     * Starts a thread to read logs from the log file in real-time.
+     */
     public void readLogsRealTime() {
         new Thread(() -> {
             try (BufferedReader reader = new BufferedReader(new FileReader(new File(LOG_FILE)))) {
@@ -73,17 +83,25 @@ public class ConfigurationService {
         }).start();
     }
 
-    // Method to stop reading logs
+    /**
+     * Stops the real-time log reading process.
+     */
     public void stopReadingLogs() {
         isReadingLogs.set(false);
     }
 
-    // Optional: Method to check if log reading is active
+    /**
+     * Checks if the real-time log reading is currently active.
+     * @return true if log reading is active, false otherwise
+     */
     public boolean isLogReadingActive() {
         return isReadingLogs.get();
     }
 
-    // Method to fetch logs for the frontend
+    /**
+     * Fetches the current log messages and clears the internal log list.
+     * @return a list of log messages
+     */
     public List<String> readLogs() {
         synchronized (logMessages) {
             List<String> logsToReturn = new ArrayList<>(logMessages);
@@ -93,7 +111,10 @@ public class ConfigurationService {
     }
 
 
-    // Method to clear the log file
+    /**
+     * Clears the contents of the log file.
+     * @throws IOException if an error occurs while clearing the file
+     */
     public void clearLogFile() throws IOException {
         File logFile = new File(LOG_FILE);
         if (logFile.exists()) {

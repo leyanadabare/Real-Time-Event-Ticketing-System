@@ -1,13 +1,14 @@
 package com.leyana.oopfinalfinal.objects;
-import org.springframework.stereotype.Component;
 
+/**
+ * Represents a customer who purchases tickets from the ticket pool.
+ */
 public class Customer implements Runnable {
     private int customerId;
     private TicketPool ticketPool;
     private int customerRetivelRate;
     private int quantity;
 
-    //@Autowired
     public Customer(int customerId, TicketPool ticketPool, int customerRetivelRate, int quantity) {
         this.customerId = customerId;
         this.ticketPool = ticketPool;
@@ -15,6 +16,7 @@ public class Customer implements Runnable {
         this.quantity = quantity;
     }
 
+    //Getters and Setters
     public int getCustomerId() {
         return customerId;
     }
@@ -40,7 +42,9 @@ public class Customer implements Runnable {
         this.quantity = quantity;
     }
 
-    //@Scheduled(fixedRateString = "#{@configuration.customerRetrieveRate * 1000}")
+    /**
+     * The main logic of the customer thread. Attempts to purchase tickets at the specified rate.
+     */
     @Override
     public void run() {
         for (int i = 0; i < quantity; i ++){

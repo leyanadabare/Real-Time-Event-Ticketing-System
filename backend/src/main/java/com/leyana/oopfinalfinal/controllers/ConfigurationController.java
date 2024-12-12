@@ -7,22 +7,35 @@ import com.leyana.oopfinalfinal.services.ConfigurationService;
 import com.leyana.oopfinalfinal.util.Configuration;
 import java.util.List;
 
+/**
+ * This class defines REST API endpoints for managing the ticketing system configuration and simulation.
+ * @RestController: indicates this class is a Spring REST controller
+ * @RequestMapping("/api"): defines the base path for all endpoints in this controller
+ * @CrossOrigin(origins = "http://localhost:4200"): enables CORS for requests originating from the specified frontend URL
+ */
 @RestController
-@RequestMapping("/api/configuration")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ConfigurationController {
 
     @Autowired
     private ConfigurationService configurationService;
 
-    // Endpoint to get configuration
+    /**
+     * GET endpoint to retrieve the current configuration.
+     * @return ResponseEntity containing the retrieved Configuration object
+     */
     @GetMapping
     public Configuration getConfiguration() {
         System.out.println("Fetching configuration...");
         return configurationService.getConfiguration();
     }
 
-    // Endpoint to save configuration
+    /**
+     * POST endpoint to save the provided configuration object.
+     * @param configuration the Configuration object to be saved
+     * @return String message indicating success or failure
+     */
     @PostMapping
     public String saveConfiguration(@RequestBody Configuration configuration) {
         System.out.println("Saving configuration: " + configuration);
@@ -30,7 +43,12 @@ public class ConfigurationController {
         return "Configuration saved successfully!";
     }
 
-    // Endpoint to run the configuration simulation
+    /**
+     * POST endpoint to initiate the simulation based on the provided configuration.
+     * Clears the log file before starting the simulation.
+     * @param configuration the Configuration object for the simulation
+     * @return ResponseEntity containing a success message or error details
+     */
     @PostMapping("/run")
     public ResponseEntity<String> runConfiguration(@RequestBody Configuration configuration) {
         try {
@@ -44,8 +62,10 @@ public class ConfigurationController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to start simulation.");
         }
     }
-
-    // Endpoint to stop log reading
+    /**
+     * POST endpoint to stop the real-time log reading process.
+     * @return ResponseEntity containing a success message or error details
+     */
     @PostMapping("/stop")
     public ResponseEntity<String> stopLogReading() {
         try {
@@ -57,13 +77,20 @@ public class ConfigurationController {
         }
     }
 
-    // Endpoint to check if log reading is active
+    /**
+     * GET endpoint to check if the real-time log reading is currently active.
+     * @return boolean indicating whether log reading is active
+     */
     @GetMapping("/is-log-reading-active")
     public boolean isLogReadingActive() {
         return configurationService.isLogReadingActive();
     }
 
-    // Polling endpoint to stream log messages
+    /**
+     * GET endpoint for frontend applications to retrieve logs in a streaming fashion.
+     * The service clears the internal log list after fetching to avoid memory issues.
+     * @return ResponseEntity containing a list of log messages
+     */
     @GetMapping("/stream-logs")
     public ResponseEntity<List<String>> streamLogs() {
         List<String> logs = configurationService.readLogs();

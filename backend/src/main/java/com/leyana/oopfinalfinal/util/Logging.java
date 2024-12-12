@@ -5,8 +5,19 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This class provides static methods for logging messages to a file.
+ */
 public class Logging {
+
+    /**
+     * The path to the log file.
+     */
     private static final String LOG_FILE_NAME = "/Users/leyanadaba/Desktop/OOPFinalFinal/ticketing_system.log";
+
+    /**
+     * The BufferedWriter instance for writing to the log file.
+     */
     private static BufferedWriter writer;
 
     static {
@@ -19,6 +30,11 @@ public class Logging {
         }
     }
 
+    /**
+     * Logs a message to the log file with a specified level.
+     * @param level   the log level (e.g., "INFO", "WARNING", "ERROR")
+     * @param message the message to log
+     */
     public static synchronized void log(String level, String message) {
         try {
             if (writer != null) {
@@ -33,6 +49,9 @@ public class Logging {
         }
     }
 
+    /**
+     * Closes the BufferedWriter to release resources.
+     */
     public static void close() {
         try {
             if (writer != null) {

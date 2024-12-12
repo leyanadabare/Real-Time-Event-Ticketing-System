@@ -4,6 +4,11 @@ import org.springframework.web.bind.annotation.*;
 import com.leyana.oopfinalfinal.services.TicketingSystemService;  // Assuming you have a service to manage the system's state
 import org.springframework.http.ResponseEntity;
 
+/**
+ * This class defines REST API endpoints for starting and stopping the ticketing system.
+ * @RestController: indicates this class is a Spring REST controller
+ * @RequestMapping("/api/system"): defines the base path for system-related endpoints
+ */
 @RestController
 @RequestMapping("/api/system")
 public class TicketingSystemController {
@@ -11,7 +16,10 @@ public class TicketingSystemController {
     @Autowired
     private TicketingSystemService ticketingSystemService;
 
-    // Endpoint to start the ticketing system
+    /**
+     * POST endpoint to start the ticketing system.
+     * @return ResponseEntity containing a success message or error details with appropriate HTTP status code.
+     */
     @PostMapping("/start")
     public ResponseEntity<String> startSystem() {
         try {
@@ -22,7 +30,10 @@ public class TicketingSystemController {
         }
     }
 
-    // Endpoint to stop the ticketing system
+    /**
+     * POST endpoint to stop the ticketing system.
+     * @return ResponseEntity containing a success message or error details with appropriate HTTP status code.
+     */
     @PostMapping("/stop")
     public ResponseEntity<String> stopSystem() {
         try {

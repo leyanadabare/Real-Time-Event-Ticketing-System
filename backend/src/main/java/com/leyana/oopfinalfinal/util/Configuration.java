@@ -4,6 +4,9 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * This class represents the configuration settings for a simulation.
+ */
 public class Configuration {
     private int maxCapacity;
     private int numVendors;
@@ -15,6 +18,7 @@ public class Configuration {
 
     public Configuration() {}
 
+ //Getters and Setters
     public int getMaxCapacity() {
         return maxCapacity;
     }
@@ -58,6 +62,11 @@ public class Configuration {
         this.quantity = quantity;
     }
 
+
+    /**
+     * Saves the current configuration to a JSON file.
+     * @param fileName the name of the file to load the configuration from
+     */
     public void saveToFile(String fileName) {
         Gson gson = new Gson();
         try (FileWriter writer = new FileWriter(fileName)) {
@@ -68,7 +77,11 @@ public class Configuration {
         }
     }
 
-    // Load configuration from a file
+    /**
+     * Loads a configuration from a JSON file.
+     * @param fileName the name of the file to load the configuration from
+     * @return the loaded configuration object
+     */
     public static Configuration loadFromFile(String fileName) {
         Gson gson = new Gson();
         try (FileReader reader = new FileReader(fileName)) {

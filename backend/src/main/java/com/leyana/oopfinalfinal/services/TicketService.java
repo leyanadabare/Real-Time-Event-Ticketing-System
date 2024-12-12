@@ -1,33 +1,46 @@
 package com.leyana.oopfinalfinal.services;
-
 import com.leyana.oopfinalfinal.objects.Ticket;
 import com.leyana.oopfinalfinal.objects.TicketPool;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+/**
+ * This class provides services related to managing tickets in the ticketing system.
+ * @Service annotation indicates this class is a Spring service bean.
+ */
 @Service
 public class TicketService {
-
     private TicketPool ticketPool;
 
-    // Retrieve all tickets
+
     public List<Ticket> getAllTickets() {
-        return List.copyOf(ticketPool.getTickets()); // Convert the queue to a list
+        // Create an unmodifiable copy of the ticket list to avoid modification issues
+        return List.copyOf(ticketPool.getTickets());
     }
 
-    // Add a ticket to the pool
+    /**
+     * Adds a new ticket to the ticket pool.
+     * @param ticket the Ticket object to be added
+     * @return the added Ticket object
+     */
     public Ticket addTicket(Ticket ticket) {
         ticketPool.addTickets(ticket);
         return ticket;
     }
 
-    // Buy a ticket (this is where customer buys a ticket from the pool)
+    /**
+     * Simulates a customer purchasing a ticket from the pool.
+     * @param customerId the ID of the customer attempting to buy a ticket
+     * @return the purchased Ticket object (null if no ticket available)
+     */
     public Ticket buyTicket(int customerId) {
         return ticketPool.buyTickets(customerId);
     }
 
-    // Optional: If you want to clear the pool (e.g., reset ticketing system), you can add such methods
+    /**
+     * Optional method to clear all tickets from the pool (e.g., for resetting the system).
+     * Use this method with caution as it removes all available tickets.
+     */
     public void clearTickets() {
         ticketPool.getTickets().clear();
     }

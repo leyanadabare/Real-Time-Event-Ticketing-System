@@ -5,16 +5,24 @@ import org.springframework.scheduling.annotation.Async;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
+/**
+ * This class represents a shared pool of tickets for vendors and customers.
+ */
 public class TicketPool {
     private Queue<Ticket> tickets = new LinkedList<>();
     private int maxCapacity;
     private static final Logger logger = LoggerFactory.getLogger(TicketPool.class);
 
+    /**
+     * Constructs a new TicketPool object with the specified maximum capacity.
+     * @param maxCapacity the maximum number of tickets the pool can hold
+     */
     public TicketPool(int maxCapacity) {
         this.maxCapacity = maxCapacity;
         logger.info("TicketPool initialized with max capacity: " + maxCapacity);
     }
 
+    // Getters and setters
     public Queue<Ticket> getTickets() {
         return tickets;
     }
@@ -31,6 +39,11 @@ public class TicketPool {
         this.maxCapacity = maxCapacity;
     }
 
+    /**
+     * Adds a new ticket to the pool asynchronously.
+     * @param ticket the Ticket object to be added
+     * @throws InterruptedException if the thread is interrupted while waiting
+     */
     @Async
     public synchronized void addTickets(Ticket ticket) {
         try {
@@ -50,6 +63,12 @@ public class TicketPool {
         }
     }
 
+    /**
+     * Simulates a customer purchasing a ticket from the pool asynchronously.
+     * @param customerId the ID of the customer attempting to buy a ticket
+     * @return the purchased Ticket object (null if no ticket available)
+     * @throws InterruptedException if the thread is interrupted while waiting
+     */
     @Async
     public synchronized Ticket buyTickets(int customerId) {
         try {

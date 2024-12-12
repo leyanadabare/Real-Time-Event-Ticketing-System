@@ -2,11 +2,23 @@ package com.leyana.oopfinalfinal.util;
 import com.leyana.oopfinalfinal.objects.Customer;
 import com.leyana.oopfinalfinal.objects.TicketPool;
 import com.leyana.oopfinalfinal.objects.Vendor;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * This class provides utility methods for the Ticketing System application,
+ * including configuration loading, manual input handling, and initialization logic.
+ */
 public class Services {
+
+    /**
+     * Loads the configuration from a file or prompts for manual input.
+     * @param scanner the Scanner object for user input
+     * @param config the Configuration object to be populated
+     * @return the loaded or manually entered configuration
+     * @throws Main.ConfigurationLoadException if configuration loading fails
+     * @throws Main.InputValidationException if user input is invalid
+     */
     public static Configuration loadConfiguration2(Scanner scanner, Configuration config) throws Main.ConfigurationLoadException, Main.InputValidationException {
         System.out.print("Load configuration from file? (yes/no): ");
         String choice = scanner.next().toLowerCase();
@@ -23,7 +35,7 @@ public class Services {
                 String useAppChoice = scanner.next().toLowerCase();
 
                 if ("yes".equals(useAppChoice)) {
-                    // Ask for manual inputs to modify the configuration
+                    // Offer chance to modify loaded config with manual input (optional)
                     return loadedConfig;
                 } else if ("no".equals(useAppChoice)) {
                     System.out.println("Thank you for using the Ticketing System Application. Goodbye!");
@@ -46,6 +58,14 @@ public class Services {
         }
         return loadedConfig;
     }
+
+    /**
+     * Prompts the user for configuration details and populates the Configuration object.
+     * @param scanner the Scanner object for user input
+     * @param config the Configuration object to be populated
+     * @return the configuration object with manually entered values
+     * @throws Main.InputValidationException if user input is invalid
+     */
     private static Configuration manualInput(Scanner scanner, Configuration config) throws Main.InputValidationException {
         // Input validation using helper methods
         config.setMaxCapacity(getValidInput(scanner, "Enter the maximum capacity of the ticket pool: "));
@@ -110,6 +130,13 @@ public class Services {
         return config;
     }
 
+    /**
+     * A method to validate inputs
+     * @param scanner the Scanner object for user input
+     * @param prompt
+     * @return the input
+     * @throws Main.InputValidationException
+     */
     private static int getValidInput(Scanner scanner, String prompt) throws Main.InputValidationException {
         int input = -1;
         while (input == -1) {
@@ -130,18 +157,24 @@ public class Services {
         return input;
     }
 
+    /**
+     * Initializes the ticketing system with the given configuration.
+     * @param config the configuration object containing system parameters
+     */
     public static void initializeTicketingSystem(Configuration config) {
         try {
+            // Create a new ticket pool with the specified maximum capacity
             TicketPool ticketPool = new TicketPool(config.getMaxCapacity());
             Logging.log("INFO", "Ticket pool initialized with capacity: " + config.getMaxCapacity());
 
-            // Use threads for vendors and customers
+            // Create and start vendor threads
             for (int i = 0; i < config.getNumVendors(); i++) {
                 int vendorId = i + 1;
                 new Thread(new Vendor(vendorId, config.getTicketReleaseRate(), ticketPool, config.getTotalTicketsPerVendor())).start();
                 Logging.log("INFO", "Vendor thread started: Vendor " + vendorId);
             }
 
+            // Create and start customer threads
             for (int i = 0; i < config.getNumCustomers(); i++) {
                 int customerId = i + 1;
                 new Thread(new Customer(customerId, ticketPool, config.getCustomerRetrieveRate(), config.getQuantity())).start();

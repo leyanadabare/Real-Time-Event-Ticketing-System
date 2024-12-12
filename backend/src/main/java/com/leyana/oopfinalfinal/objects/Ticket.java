@@ -1,16 +1,20 @@
 package com.leyana.oopfinalfinal.objects;
 import java.math.BigDecimal;
 
+/**
+ * Represents a single ticket with an ID, event name, and price.
+ */
 public class Ticket {
     private int ticketId;
     private String eventName;
     private BigDecimal ticketPrice;
-
-    public Ticket(int ticketId, String ticketName, BigDecimal ticketPrice) {
+    public Ticket(int ticketId, String eventName, BigDecimal ticketPrice) {
         this.ticketId = ticketId;
-        this.eventName = ticketName;
+        this.eventName = eventName;
         this.ticketPrice = ticketPrice;
     }
+
+    //Getters and Setters
     public int getTicketId() {
         return ticketId;
     }
@@ -30,6 +34,10 @@ public class Ticket {
         this.ticketPrice = ticketPrice;
     }
 
+    /**
+     * Returns a string representation of the ticket, including its ID, event name, and price.
+     * @return a string representation of the ticket
+     */
     @Override
     public String toString(){
         return "Ticket: " + '\n'
